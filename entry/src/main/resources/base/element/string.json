@@ -2,11 +2,11 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "A playground app to test UX on HarmonyOS"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "description"
+      "value": "A playground app to test UX on HarmonyOS"
     },
     {
       "name": "EntryAbility_label",

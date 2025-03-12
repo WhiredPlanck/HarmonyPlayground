@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "me.panda527.harmonyplayground",
+    "bundleName": "me.panda527.playground",
     "vendor": "example",
     "versionCode": 1000000,
     "versionName": "1.0.0",
