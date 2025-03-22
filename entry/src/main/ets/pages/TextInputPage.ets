@@ -1,3 +1,6 @@
+import { inputMethod } from "@kit.IMEKit"
+import { BusinessError } from "@kit.BasicServicesKit"
+
 @Component
 export struct TextInputPage {
   build() {
@@ -24,6 +27,21 @@ export struct TextInputPage {
           middle: { anchor: '__container__', align: HorizontalAlign.Center }
         })
         .margin({ left: 10, top: 10, right: 10, bottom: 10 })
+      Button('Show input method picker')
+        .alignRules({
+          top: { anchor: 'MultiLine', align: VerticalAlign.Bottom },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        })
+        .margin({ left: 10, top: 10, right: 10, bottom: 10 })
+        .onClick(() => {
+          const  inputMethodSetting = inputMethod.getSetting()
+          try {
+            inputMethodSetting.showOptionalInputMethods((err: BusinessError, data: boolean) => {
+              if (err) return
+            })
+          } catch (err) {
+          }
+        })
     }
   }
 }
